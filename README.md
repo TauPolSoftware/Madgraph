@@ -38,7 +38,7 @@ The last should produce the gridpack DYTauTau_HT-incl_slc6_amd64_gcc630_CMSSW_9_
 
 Move it to some working directory
 
-```
+```OD
 mkdir MyGeneration
 mv DYTauTau_HT-incl_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz MyGeneration/	
 cd MyGeneration
@@ -54,9 +54,10 @@ Generate 1000 events with random seed 123
 This will produce the lhe file, you can convert it to root tree by running makelhetree from the base dir;
 
 ```
-./makelhetree.py -i genproductions/bin/MadGraph5_aMCatNLO/MyMadgraph/cmsgrid_final.lhe
+./makelhetree.py -i genproductions/bin/MadGraph5_aMCatNLO/MyGeneration/cmsgrid_final.lhe
 ```
 
 
 
 
+The MG parameters canbe set in  MyGeneration/process/madevent/Cards/param_card.dat
