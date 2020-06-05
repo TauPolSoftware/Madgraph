@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input-file",help="Input file; [Default: %(default)s] ", type = str, action="store", default = '1')
-    parser.add_argument("-o", "--output-file",help="Output file; [Default: %(default)s] ", type = str,action="store", default = '1000')
+    parser.add_argument("-o", "--output-file",help="Output file; [Default: %(default)s] ", type = str,action="store", default = 'Output.root')
     args = parser.parse_args()
     cwd = os.getcwd()
 

@@ -2,8 +2,14 @@
 Creating a madgraph gridpack
 
 
+Clone this repo
+```
+git clone git@github.com:TauPolSoftware/Madgraph.git
+```
 
-First of all one needs to clone the CMS setup for creating a gridpack out of many generators
+
+
+one needs to clone the CMS setup for creating a gridpack out of many generators
 ```
 git clone git@github.com:cms-sw/genproductions.git
 ```
@@ -38,3 +44,19 @@ mv DYTauTau_HT-incl_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz MyGeneration/
 cd MyGeneration
 tar -xvf DYTauTau_HT-incl_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz
 ```
+
+Generate 1000 events with random seed 123
+
+```
+./runcmsgrid.sh  1000 123 1
+```
+
+This will produce the lhe file, you can convert it to root tree by running makelhetree from the base dir;
+
+```
+./makelhetree.py -i genproductions/bin/MadGraph5_aMCatNLO/MyMadgraph/cmsgrid_final.lhe
+```
+
+
+
+
