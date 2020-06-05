@@ -8,6 +8,12 @@ git clone git@github.com:TauPolSoftware/Madgraph.git
 ```
 
 
+Setup your env at sbgui6
+
+```
+ cernlib-use root
+```
+
 
 one needs to clone the CMS setup for creating a gridpack out of many generators
 ```
